@@ -1,0 +1,42 @@
+===USERS DATA MODEL===
+User
+-id: ObjectId
+-firstName: String
+-lastName: String
+-address: String
+-mobileNo: String
+-email: String
+-password: String
+-itemsPurchased: [
+
+	{
+		-productId: ObjectId
+		-datePurchased: ISODate
+		-quantity: Number
+	}
+
+]
+
+
+
+===ITEMS DATA MODEL===
+Item
+-id: ObjectId
+-name: String
+-brandName: String
+-description: String
+-warrantyService: String
+-price: Number
+-isAvailable: Boolean
+-quantity: Number
+-reviews: [
+
+	{
+		-userId: ObjectId
+		-reviewTitle: String
+		-reviewDate: ISODate
+		-description: String
+	}
+
+]
+
